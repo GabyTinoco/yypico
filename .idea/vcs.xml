@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/components/pico" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/components/pico-deprecated" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/components/pico-theme" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/Pico-Pagination" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/plugins/PicoPagination" vcs="Git" />
+  </component>
+</project>

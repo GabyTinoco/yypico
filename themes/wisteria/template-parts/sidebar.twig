@@ -1,0 +1,17 @@
+<sidebar>
+    <h3>Archivo</h3>
+
+    <div>
+    {% if meta.purpose == "pico_categories_page" %}
+        <ul style="list-style-type: none;">
+            {% for cat, cated_pages in pico_categories_page %}
+              {% for cated_page_title, cated_page_link in cated_pages %}
+                  <li><h4><a href="{{ cated_page_link }}"><b>{{ cat }}</b></a></h4></li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+    </div>
+</sidebar>
+<hr>
+

@@ -1,0 +1,15 @@
+<div class="pagination">
+    {% if page_number > 1 %}<a href="{{ base_url }}/{{ page_indicator }}/{{ page_number - 1 }}"
+                               class="button previous">Página anterior..</a>{% endif %}
+  <!--  <div class="pages">
+        { # for page_num in 1..total_pages %}
+            <a href="{{ base_url }}/{{ page_indicator }}/{{ page_num }}"{% if page_num == page_number %} class="active"{% endif %}>
+                {{ page_num }}
+            </a>
+        {##} endfor %}
+    </div>-->
+    {% if page_number < total_pages %}
+    <a href="{{ base_url }}/{{ page_indicator }}/{{ page_number + 1 }}" class="button next">
+            Siguiente página</a>
+    {% endif %}
+</div>

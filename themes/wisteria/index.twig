@@ -1,0 +1,65 @@
+{{ include("template-parts/header.twig") }}
+
+<body>
+	<!-- Navigation -->
+	{% if page_number > 1 %}
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand" href="{{ base_url }}">Inicio</a>
+            </div>
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	{% endif %}
+    <!-- Page Header -->
+    <!-- Main Content -->
+    <div class="container" id = "principal">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {% if paged_pages %}
+                    {% for page in paged_pages|sort_by("time")|reverse %}
+                        <div class="post-preview">
+                            <div class="two-columns">
+                                <img src="{{ meta.img }}">
+                            </div>
+
+                            <div class="two-columns">
+                                <a href="{{ page.url }}">
+                                    <h2 class="post-title">
+                                        {{ page.title }}
+                                    </h2>
+                                </a>
+                                <p class="post-meta">
+                                    <i class="fas fa-user"></i> By {{ page.author }}
+                                    <i class="fas fa-clock"></i>  {{ page.date }}
+                                </p>
+
+                                <h3 class="post-subtitle">
+                                    {{ page.description }}
+                                </h3>
+                            </div>
+                        </div>
+                        <hr>
+                    {% endfor %}
+                {% endif %}
+                <!-- Pager -->
+                {{ include("template-parts/paginacion.twig") }}
+            </div>
+            <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-1">
+                {{ include("template-parts/sidebar.twig") }}
+            </div>
+        </div>
+
+
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    {{ include("template-parts/footer.twig") }}
+</body>
+</html>
